@@ -37,3 +37,70 @@ div li button {
   margin: 0 15px;
   background: #ca4949;
 }
+
+.formModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.formModal form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.formModal form input {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.checkboxes {
+  margin: 0;
+}
+.checkboxes input,
+.checkboxes div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkboxes div {
+  margin: 10px 0;
+}
+.checkboxes label {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.btn {
+  background: #7159c1;
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btnCancel {
+  background: #ca4949;
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
