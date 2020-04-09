@@ -8,7 +8,15 @@ function App() {
   const [repositories, setRepositories] = useState([]);
 
   async function handleAddRepository() {
-    // TODO
+    const repo = {
+      title: "repoLikeRestAPI",
+      url: "https://github.com/YanOliveira/repoLikeRestAPI",
+      techs: ["nodeJs", "Express"],
+    };
+    api.post("repositories", repo).then(({ data }) => {
+      const newRepositories = [...repositories, data];
+      setRepositories(newRepositories);
+    });
   }
 
   async function handleRemoveRepository(id) {
