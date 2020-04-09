@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import api from "./services/api";
+import RepositoryItem from "./components/RepositoryItem";
 
 import "./styles.css";
 
@@ -25,10 +26,11 @@ function App() {
       <ul data-testid="repository-list">
         {repositories.map((repo) => {
           return (
-            <li>
-              {repo.title}
-              <button onClick={() => handleRemoveRepository(1)}>Remover</button>
-            </li>
+            <RepositoryItem
+              key={repo.id}
+              title={repo.title}
+              handleRemoveRepository={() => handleRemoveRepository(repo.id)}
+            />
           );
         })}
       </ul>
