@@ -20,7 +20,12 @@ function App() {
   }
 
   async function handleRemoveRepository(id) {
-    // TODO
+    api.delete(`repositories/${id}`).then(({ status }) => {
+      if (status === 204) {
+        const newRepositories = repositories.filter((repo) => repo.id !== id);
+        setRepositories(newRepositories);
+      }
+    });
   }
 
   useEffect(() => {
